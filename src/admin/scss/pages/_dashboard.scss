@@ -1,0 +1,19 @@
+.wrap {
+    h1 {
+        color: #0085BA;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2em;
+    }
+    .dashboard{
+        display: block;
+        padding: 20px 40px;
+        background-color: #fff;
+        box-shadow: 0 5px 4px -2px rgba(0,0,0,0.15);
+        .info{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom:2em;
+        }
+    }
+}
