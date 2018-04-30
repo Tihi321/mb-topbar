@@ -19,10 +19,13 @@ class DatabaseController extends BaseController
 			)
         );
         $logo_link_default = $this->plugin_url."assets/front/assets/images/logo.png";
-        $logo_link = (@$options["wp_logo_link"] != "") ? $options["wp_logo_link"] : $logo_link_default;
         $topbar_list_array = array();
+
         $options = get_option( "mb_topbar" );
         $topbar_list = get_option( "mb_topbar_list" );
+
+        $logo_link = (@$options["wp_logo_link"] != "") ? $options["wp_logo_link"] : $logo_link_default;
+
         if(@$topbar_list){
             foreach ($topbar_list as $key => $value) {
                 if(@$value[activate] == 1){
@@ -31,6 +34,7 @@ class DatabaseController extends BaseController
                 }
             }
         }
+        
         $topbar_options = array(
             "home_url" => site_url(),
             "plugin_url" => $this->plugin_url,

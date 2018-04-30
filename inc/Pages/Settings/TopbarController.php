@@ -103,7 +103,7 @@ class TopbarController extends BaseController
 
 			array(
 				'id' => 'title',
-				'title' => 'Menu Name',
+				'title' => 'Selection Name',
 				'callback' => array( $this->topbar_callback, 'textField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
@@ -144,7 +144,7 @@ class TopbarController extends BaseController
 			),
 			array(
 				'id' => "color",
-				'title' => "Topbar Color",
+				'title' => "Topbar BG Color",
 				'callback' => array( $this->topbar_callback, 'colorField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
