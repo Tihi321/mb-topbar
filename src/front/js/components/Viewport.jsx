@@ -22,7 +22,7 @@ class Viewport extends Component {
         )
     }
     handleOnClick(value){
-        this.props.selectedWidth(value);
+        this.props.changeWidth(value);
     }
 }
 

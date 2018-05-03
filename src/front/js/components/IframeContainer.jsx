@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class IframeContainer extends Component {
     render() {
         let style = {
-            width: (this.props.selectedWidth == undefined) ? this.props.defaultOptions.width : this.props.selectedWidth
+            width: this.props.width
         }
         let url = this.props.selectedProject.link;
         return (

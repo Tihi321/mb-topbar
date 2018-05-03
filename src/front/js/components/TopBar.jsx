@@ -15,7 +15,7 @@ class TopBar extends Component {
                 <Logo home_url={this.props.home_url} logo_url={this.props.logo_url} />
                 <div className="header-text"><p>Menu</p></div>
                 <Menu selectedProjectPath={this.props.selectedProject.path} projects={this.props.projects} />
-                <Viewport plugin_url={this.props.plugin_url} selectedWidth={this.selectedWithInTopBar.bind(this)} />
+                <Viewport changeWidth={this.props.changeWidth} plugin_url={this.props.plugin_url} />
                 <div className="social">
                     <FacebookShareButton url={this.props.home_url} > 
                         <FacebookIcon size={32} round={true} />
@@ -32,9 +32,6 @@ class TopBar extends Component {
                 </div>
             </div>
         )
-    }
-    selectedWithInTopBar(selectedWithInTopBar) {
-        this.props.selectedWithInTopBar(selectedWithInTopBar);
     }
 }
 
