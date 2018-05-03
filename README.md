@@ -6,12 +6,14 @@ This plugin adds bar on top of the page and iframe below where you can showcase 
 <img src="readme/images/mb_topbar_preview_default.png">
 </div>
 
-You have the option to change logo and for each item you can choose background color of the bar, selection name and slug. 
+You have the option to change *logo* and for each item you can choose *background color*, *selection name* and *slug*. 
 
 <div style="text-align:center;margin:2em 0;">
 <img src="readme/images/mb_topbar_preview.png">
 </div>
 
-This plugin uses Wordpress Api to send information from backend to React frontend. In React hash router creates routes with slug from Wordpress.
+**Wordpress Api** is used to send information from backend.
+
+Built with: **Wordpress**, **React**, **Redux**
 
 

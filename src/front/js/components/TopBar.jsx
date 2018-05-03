@@ -6,6 +6,9 @@ import { FacebookShareButton, GooglePlusShareButton, LinkedinShareButton, Twitte
 import { FacebookIcon, GooglePlusIcon, LinkedinIcon, TwitterIcon } from 'react-share';
 
 class TopBar extends Component {
+    shouldComponentUpdate(){
+        return false;
+    }
     render() {
         const style_topbar = {
             backgroundColor: this.props.selectedProject.color
