@@ -1,3 +1,3 @@
 # MB Topbar - Wordpress plugin
 
-Implementation with **Context** from **Redux**
+Implementation with **Context API** from **Redux**
