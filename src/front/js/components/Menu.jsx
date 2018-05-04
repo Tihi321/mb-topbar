@@ -17,7 +17,7 @@ class Menu extends Component {
     render() {
         let select_items = this.bindSelectItems();
         return (
-            <select value={this.props.selectedProjectPath} onChange={this.handleOnChange.bind(this)} className="select">
+            <select value={this.props.selected_project_path} onChange={this.handleOnChange.bind(this)} className="select">
                 {select_items}
             </select>
         )
