@@ -5,7 +5,7 @@ class IframeContainer extends Component {
         let style = {
             width: this.props.width
         }
-        let url = this.props.selectedProject.link;
+        let url = this.props.selected_project.link;
         return (
             <div id="iframeContainer" className="container-iframe" style={style}>
                 <iframe id="iframe" src={url} frameBorder="0">

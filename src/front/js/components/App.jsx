@@ -5,14 +5,14 @@ import IframeContainer from './IframeContainer.jsx';
 class App extends Component {
 
     render() {
-        const image_url = this.props.plugin_url + "assets/front/assets/images/bg.png"
+        const image_url = this.props.store.api.plugin_url + "assets/front/assets/images/bg.png"
         const style = {
             background: `url(${image_url}) repeat`
         }
         return (
             <div className="react-container" style={style}>
-                <TopBar changeWidth={this.props.changeWidth} home_url={this.props.home_url} logo_url={this.props.logo_url} plugin_url={this.props.plugin_url} selectedProject={this.props.selectedProject} projects={this.props.projects} />
-                <IframeContainer width={this.props.width} selectedProject={this.props.selectedProject} />
+                <TopBar changeWidth={this.props.changeWidth} store={this.props.store} selected_project={this.props.selected_project} />
+                <IframeContainer width={this.props.store.width} selected_project={this.props.selected_project} />
             </div>
         )
     }

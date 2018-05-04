@@ -7,15 +7,6 @@ import getProjects from '../actions/get-projects';
 import changeWidth from '../actions/change-width';
 
 class Routes extends Component {
-    constructor() {
-        super();
-        this.state = {
-            home_url: "",
-            logo_url: "",
-            plugin_url:"",
-            projects: []
-        }
-    }
 
     componentDidMount() {
         store.dispatch(getProjects());
@@ -38,7 +29,7 @@ class Routes extends Component {
                 return (
                     <Route key={index} path={"/" + project.path} exact={true} render={
                         () => {
-                            return (<App home_url={this.props.home_url} logo_url={this.props.logo_url} plugin_url={this.props.plugin_url} projects={this.props.projects} selectedProject={project} width={this.props.width} changeWidth={this.props.onChangeWidth} />);
+                            return (<App store={this.props.store} selected_project={project} changeWidth={this.props.onChangeWidth} />);
                         }
                     } />
                 );
@@ -56,11 +47,8 @@ Routes.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    state: state.topbar.api.home_url,
-    logo_url: state.topbar.api.logo_url,
-    plugin_url: state.topbar.api.plugin_url,
     projects: state.topbar.api.projects,
-    width: state.topbar.width
+    store:state.topbar
 });
 
 const mapActionsToProps = {
