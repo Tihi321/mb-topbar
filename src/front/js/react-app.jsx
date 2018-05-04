@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Routes from './containers/routes.jsx';
 import store from './store';
 import { Provider } from 'react-redux';
+import registerServiceWorker from './utils/registerServiceWorker';
 
 
 class ReactApp {
@@ -15,8 +16,9 @@ class ReactApp {
             document.getElementById('react-topbar')
         );
     }
-
 }
+
+registerServiceWorker();
 
 export {
     ReactApp
