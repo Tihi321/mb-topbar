@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @package  MBTopbar
  */
@@ -20,5 +20,6 @@ class BaseController
 		$option = get_option( 'mb_topbar' );
 
 		return isset( $option[ $key ] ) ? $option[ $key ] : false;
-	}
+  }
+
 }

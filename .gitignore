@@ -4,3 +4,6 @@ vendor
 tmp
 .sass-cache
 package-lock.json
+
+# Public files
+skin/public

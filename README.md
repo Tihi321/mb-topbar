@@ -14,6 +14,4 @@ You have the option to change your **logo** and for each *selection item* you ca
 
 **Wordpress Api** is used to send information from backend.
 
-In this *master* branch is the implementation with **Redux**, in the *context-api* branch is the implementation with **Context API**
-
 Built with: **Wordpress**, **React**, **Redux**
