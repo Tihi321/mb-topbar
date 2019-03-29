@@ -4,7 +4,7 @@
 
 	<div class="dashboard">
 		<div class="info">
-			<p><?php esc_html_e( 'With this plugin you can showcase your websites. It uses page template Topbar. Menu on top of the page, will change source of the iframe bellow. the first active page from showcase list is show as home. If custom homepage is checked you need to set / as a slug to one of the pages as this page will be shown first', 'mb-topbar' ); ?></p>
+			<p><?php esc_html_e( 'With this plugin you can showcase your websites. It uses page template Topbar. Menu on top of the page, will change source of the iframe bellow.', 'mb-topbar' ); ?></p>
 			<div class="developer">
 				<h3>Developer</h3>
 				<p>Tihomir Selak</p>

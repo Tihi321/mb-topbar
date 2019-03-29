@@ -1,6 +1,5 @@
 # Copyright (C) 2019 Mb Topbar
 # This file is distributed under the same license as the Mb Topbar package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mb Topbar\n"
@@ -8,14 +7,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.2.1\n"
+"Last-Translator: \n"
+"Language: en_GB\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -70,7 +72,9 @@ msgid "Custom Homepage"
 msgstr ""
 
 #: inc/Pages/Settings/Dashboard.php:108
-msgid "This options allows you to name first item to show on the page, if unchecked first active item will be shown"
+msgid ""
+"This options allows you to name first item to show on the page, if unchecked "
+"first active item will be shown"
 msgstr ""
 
 #: inc/Pages/Settings/TopbarController.php:93
@@ -102,7 +106,9 @@ msgid "Slug"
 msgstr ""
 
 #: inc/Pages/Settings/TopbarController.php:144
-msgid "This is the slug for the page, it appears in address bar. Slug should be unique from other items."
+msgid ""
+"This is the slug for the page, it appears in address bar. Slug should be "
+"unique from other items."
 msgstr ""
 
 #: inc/Pages/Settings/TopbarController.php:150
@@ -126,7 +132,9 @@ msgid "Dashboard"
 msgstr ""
 
 #: templates/dashboard.php:7
-msgid "With this plugin you can showcase your websites. It uses page template Topbar. Menu on top of the page, will change source of the iframe bellow."
+msgid ""
+"With this plugin you can showcase your websites. It uses page template "
+"Topbar. Menu on top of the page, will change source of the iframe bellow."
 msgstr ""
 
 #: templates/topbar.php:9
@@ -143,4 +151,12 @@ msgstr ""
 
 #: templates/topbar.php:22
 msgid "active"
+msgstr ""
+
+#: skin/front/script/components/Logo.jsx:10
+msgid "Homepage Link"
+msgstr ""
+
+#: skin/front/script/components/TopBar.jsx:32
+msgid "Menu"
 msgstr ""
