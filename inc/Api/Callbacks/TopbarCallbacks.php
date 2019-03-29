@@ -66,10 +66,15 @@ class TopbarCallbacks
 
     $helper_output = ( empty($helper ) ) ? '' : "<div class='mb-topbar__helper'>$helper</div>";
 
+    $pick_color_text = __('Choose Color', 'mb-topbar');
 
-		$output = '<div class="color-field-wrapper">';
-		$output .= '<input type="text" class="cpa-color-picker" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '">';
-    $output .= '</div>';
+    $output = '<div class="color-picker-color js-color-picker-color"';
+    $output .= ' style=background-color:';
+    $output .= $value;
+    $output .= ';';
+    $output .= '></div>';
+		$output .= "<button class='button button-secondary button-small js-color-picker-button'>$pick_color_text</button>";
+		$output .= '<input type="text" hidden class="js-color-input" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '">';
 
     echo $output;
     echo $helper_output;
@@ -127,7 +132,7 @@ class TopbarCallbacks
 
       echo "<tr>";
       echo "<td class='name'>{$title}</td>";
-      echo "<td class=\"text-center small\" style=\"background-color:{$color};\"></td>";
+      echo "<td class=\"text-center small topbar-color-bg\" style=\"background-color:{$color};\"></td>";
       echo "<td class=\"text-center small {$active}\">{$active}</td>";
       echo "<td class=\"text-center small {$is_home}\">{$is_home}</td>";
       echo "<td class=\"text-center btns\">";

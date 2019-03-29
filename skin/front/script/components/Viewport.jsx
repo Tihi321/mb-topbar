@@ -1,6 +1,6 @@
-import {Component} from 'react';
+import {PureComponent} from 'react';
 
-class Viewport extends Component {
+class Viewport extends PureComponent {
   render() {
     const imageUrl =
       `${this.props.pluginUrl}skin/public/images/devices.png`;

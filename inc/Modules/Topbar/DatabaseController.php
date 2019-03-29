@@ -19,7 +19,7 @@ class DatabaseController extends BaseController
                 "color" => "#111111"
 			)
         );
-        $logo_link_default = $this->plugin_url."skin/publi/images/logo.png";
+        $logo_link_default = $this->plugin_url."skin/public/images/logo.png";
         $topbar_list_array = array();
 
         $options = get_option( "mb_topbar" );

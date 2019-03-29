@@ -32,10 +32,18 @@ class DashboardCallbacks extends BaseController
 		$name = $args['label_for'];
 		$option_name = $args['option_name'];
 		$options = get_option( $option_name );
-		$value = isset( $options[$name] ) ? $options[$name] : "" ;
+    $value = isset( $options[$name] ) ? $options[$name] : "" ;
 
+    $upload_button_title = ( ! empty( $value ) ) ? __('Edit', 'mb-topbar') : __('Upload', 'mb-topbar');
+    $remove_button_title = __('Remove', 'mb-topbar');
+    $logo_classes = ( ! empty( $value ) ) ? 'logo-image js-logo-image' : 'logo-image js-logo-image empty';
 
-		echo '<input type="text" class="regular-text" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '" placeholder="' . $args['placeholder'] . '">';
+    echo "<div class='$logo_classes' style='background-image: url(";
+    echo esc_url_raw($value);
+    echo ");'></div>";
+    echo "<button class='button button-secondary button-small js-logo-media-btn'>$upload_button_title</button>";
+    echo "<button class='button button-secondary button-small js-logo-media-remove-btn'>$remove_button_title</button>";
+		echo '<input type="text" hidden class="regular-text js-logo-url" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '" placeholder="' . $args['placeholder'] . '">';
   }
 
   public function checkboxField( $args )

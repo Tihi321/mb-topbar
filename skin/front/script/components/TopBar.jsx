@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import {
   FacebookShareButton,
   GooglePlusShareButton,
@@ -32,7 +32,7 @@ class TopBar extends Component {
           <p>{__('Menu', 'mb-topbar')}</p>
         </div>
         <Menu
-          selectedProjectPath={this.props.selectedProject.path}
+          selectedProjectSlug={this.props.selectedProject.slug}
           projects={this.props.context.wpApi.projects}
         />
         <Viewport

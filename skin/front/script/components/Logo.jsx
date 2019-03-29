@@ -1,14 +1,17 @@
-import {Component} from 'react';
+import {PureComponent} from 'react';
 import {__} from '@wordpress/i18n';
 
-class Logo extends Component {
+class Logo extends PureComponent {
   render() {
+    const logoStyle = {
+      backgroundImage: `url(${this.props.logoUrl})`,
+    };
     return (
       <a
         className="logo"
         href={this.props.homeUrl}
         title={__('Homepage Link', 'mb-topbar')}>
-        <img src={this.props.logoUrl} alt="logo" />
+        <div className="mb-topbar-logo" style={logoStyle}></div>
       </a>
     );
   }

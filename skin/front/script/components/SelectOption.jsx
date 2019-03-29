@@ -1,9 +1,9 @@
-import {Component} from 'react';
+import {PureComponent} from 'react';
 
-class SelectOption extends Component {
+class SelectOption extends PureComponent {
   render() {
     return (
-      <option className="option" value={this.props.selectOptions.path}>
+      <option className="option" value={this.props.selectOptions.slug}>
         {this.props.selectOptions.title}
       </option>
     );

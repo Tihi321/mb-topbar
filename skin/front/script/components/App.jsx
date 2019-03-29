@@ -1,8 +1,8 @@
-import {Component} from 'react';
+import {PureComponent} from 'react';
 import TopBar from './TopBar.jsx';
 import IframeContainer from './IframeContainer.jsx';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     const imageUrl =
       `${this.props.context.wpApi.pluginUrl}skin/public/images/bg.png`;

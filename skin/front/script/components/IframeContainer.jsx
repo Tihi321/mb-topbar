@@ -1,6 +1,6 @@
-import {Component} from 'react';
+import {PureComponent} from 'react';
 
-class IframeContainer extends Component {
+class IframeContainer extends PureComponent {
   render() {
     const style = {
       width: this.props.width,

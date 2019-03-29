@@ -1,8 +1,8 @@
-import {Component} from 'react';
+import {PureComponent} from 'react';
 import {withRouter} from 'react-router-dom';
 import SelectOption from './SelectOption.jsx';
 
-class Menu extends Component {
+class Menu extends PureComponent {
   bindSelectItems() {
     let items = [];
     if (this.props.projects.length >= 1) {
@@ -16,7 +16,7 @@ class Menu extends Component {
     const selectItems = this.bindSelectItems();
     return (
       <select
-        value={this.props.selectedProjectPath}
+        value={this.props.selectedProjectSlug}
         onChange={this.handleOnChange.bind(this)}
         onBlur={this.handleOnBlur}
         className="select">

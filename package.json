@@ -81,6 +81,7 @@
     "react-select": "^2.1.2",
     "react-share": "^2.4.0",
     "react-transition-group": "^2.6.0",
+    "vanilla-picker": "^2.7.2",
     "wp-pot": "^1.7.0"
   },
   "browserslist": [

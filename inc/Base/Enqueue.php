@@ -18,6 +18,9 @@ class Enqueue extends BaseController
     // enqueue only on setting page
     if( ( ! empty($_GET["page"] ) && $_GET["page"] == "mb_topbar" ) || ( ! empty($_GET["page"] ) && $_GET["page"] == "mb_topbar_list_page" ) ) {
 
+      wp_enqueue_media();
+      wp_enqueue_script( 'wp-i18n' );
+
       $main_admin_style = $this->plugin_url . 'skin/public/styles/adminTopBar.css';
       wp_register_style( 'mbwp-admin-style', $main_admin_style, '', '1.0.0', false );
       wp_enqueue_style( 'mbwp-admin-style' );

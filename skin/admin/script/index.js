@@ -1,33 +1,26 @@
-(function($) {
+import generalHelper from '../../helpers/general-helper';
+import Tabs from './components/Tabs';
+import Media from './components/Media';
+import ColorPicker from './components/ColorPicker';
 
-  window.addEventListener('load', function() {
+generalHelper.domReady(() => {
 
+  // initialize tabs on showcase page
+  const tabs = new Tabs('ul.nav-tabs > li');
+  tabs.init();
 
-    // Add Color Picker to all inputs that have 'color-field' class
-    $('.cpa-color-picker').wpColorPicker();
+  // initialize upload media for logo on dashboard page
+  const imageElement = document.querySelector('.js-logo-image');
+  if (imageElement) {
+    const media = new Media(imageElement);
+    media.init();
+  }
 
-    // store tabs variables
-    const tabs = document.querySelectorAll('ul.nav-tabs > li');
+  // initialize color picker
+  const colorPickerElement = document.querySelector('.js-color-picker-button');
+  if (colorPickerElement) {
+    const colorPicker = new ColorPicker(colorPickerElement);
+    colorPicker.init();
+  }
 
-    function switchTab(event) {
-      event.preventDefault();
-
-      document.querySelector('ul.nav-tabs li.active').classList.remove('active');
-      document.querySelector('.tab-pane.active').classList.remove('active');
-
-      const clickedTab = event.currentTarget;
-      const anchor = event.target;
-      const activePaneID = anchor.getAttribute('href');
-
-      clickedTab.classList.add('active');
-      document.querySelector(activePaneID).classList.add('active');
-
-    }
-
-    for (let i = 0; i < tabs.length; i++) {
-      tabs[i].addEventListener('click', switchTab);
-    }
-
-  });
-
-})(jQuery);
+});
