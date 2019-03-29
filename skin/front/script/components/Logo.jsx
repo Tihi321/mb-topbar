@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import {__} from '@wordpress/i18n';
 
 class Logo extends Component {
   render() {
@@ -6,7 +7,7 @@ class Logo extends Component {
       <a
         className="logo"
         href={this.props.homeUrl}
-        title="Tihomir Selak Portfolio">
+        title={__('Homepage Link', 'mb-topbar')}>
         <img src={this.props.logoUrl} alt="logo" />
       </a>
     );

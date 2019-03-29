@@ -85,7 +85,7 @@ class Dashboard extends BaseController
 		$args = array(
       array(
         'id' => "wp_logo_link",
-        'title' => "Logo",
+        'title' => __( 'Logo', 'mb-topbar' ),
         'callback' => array( $this->callbacks_mngr, 'textField' ),
         'page' => 'mb_topbar',
         'section' => 'mb_topbar_dashboard',
@@ -97,14 +97,15 @@ class Dashboard extends BaseController
       ),
 			array(
 				'id' => 'custom_homepage',
-				'title' => 'Custom Homepage',
+				'title' => __( 'Custom Homepage', 'mb-topbar' ),
 				'callback' => array( $this->callbacks_mngr, 'checkboxField' ),
 				'page' => 'mb_topbar',
 				'section' => 'mb_topbar_dashboard',
 				'args' => array(
 					'option_name' => 'mb_topbar',
 					'label_for' => 'custom_homepage',
-					'class' => 'ui-toggle'
+          'class' => 'ui-toggle',
+          'helper' => __( 'This options allows you to name first item to show on the page, if unchecked first active item will be shown', 'mb-topbar' ),
 				)
 			),
     );

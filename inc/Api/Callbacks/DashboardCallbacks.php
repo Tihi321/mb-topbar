@@ -40,14 +40,18 @@ class DashboardCallbacks extends BaseController
 
   public function checkboxField( $args )
 	{
-		$name = $args['label_for'];
+    $name = $args['label_for'];
+    $helper = ( ! empty( $args['helper'] ) ) ? $args['helper'] : '';
 		$classes = $args['class'];
 		$option_name = $args['option_name'];
 
     $checkbox = get_option( $option_name );
     $checked = ! empty($checkbox[$name]) ?: false;
 
-		echo $this->callbacks_helper->checkboxToggleField($classes, $checked, $option_name, $name );
+    $helper_output = ( empty($helper ) ) ? '' : "<div class='mb-topbar__helper'>$helper</div>";
+
+    echo $this->callbacks_helper->checkboxToggleField($classes, $checked, $option_name, $name );
+    echo $helper_output;
 
 	}
 

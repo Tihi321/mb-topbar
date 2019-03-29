@@ -9,6 +9,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from 'react-share';
+import {__} from '@wordpress/i18n';
 import Logo from './Logo.jsx';
 import Menu from './Menu.jsx';
 import Viewport from './Viewport.jsx';
@@ -28,7 +29,7 @@ class TopBar extends Component {
           logoUrl={this.props.context.wpApi.logoUrl}
         />
         <div className="header-text">
-          <p>Menu</p>
+          <p>{__('Menu', 'mb-topbar')}</p>
         </div>
         <Menu
           selectedProjectPath={this.props.selectedProject.path}

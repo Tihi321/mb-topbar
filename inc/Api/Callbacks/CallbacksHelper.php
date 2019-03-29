@@ -26,7 +26,7 @@ class CallbacksHelper
 	{
 		$output = array();
 
-    $output["wp_logo_link"] = $input["wp_logo_link"];
+    $output["wp_logo_link"] = esc_url_raw( $input["wp_logo_link"] );
     $output["custom_homepage"] = isset( $input["custom_homepage"] ) ?: false;
 
 		return $output;
@@ -35,32 +35,39 @@ class CallbacksHelper
     public function topbarSanitize( $input )
 	{
 
-		$output = get_option('mb_topbar_list');
-
+    $output = get_option('mb_topbar_list');
 
 		if ( isset($_POST["remove"]) ) {
 			unset($output[$_POST["remove"]]);
 
 			return $output;
-		}
+    }
 
+    $activate = ! empty($input['activate'] ) ?: false;
+    $is_home = ! empty($input['is_home'] ) ?: false;
+    $title = sanitize_text_field( $input['title'] );
+    $slug = str_replace(' ', '-', strtolower(sanitize_text_field( $input['slug'] )));
+    $link = esc_url_raw( $input['link'] );
+    $color = sanitize_text_field( $input['color'] );
 
-		if ( count($output) == 0 || $output == false ) {
-			$output[$input['title']] = $input;
+    $input_array = [
+      'activate' => $activate,
+      'is_home' => $is_home,
+      'title' => $title,
+      'slug' => $slug,
+      'link' => $link,
+      'color' => $color,
+    ];
 
-			return $output;
-		}
+		if ( empty($output) ||  empty( $output[$slug] ) ) {
+      $output[$slug] = $input_array;
 
-		foreach ($output as $key => $value) {
-			if ($input['title'] === $key) {
-				$output[$key] = $input;
-			} else {
-				$output[$input['title']] = $input;
-			}
-		}
+      return $output;
+    }
 
+    $output[$slug] = $input_array;
 
-		return $output;
+    return $output;
 	}
 
 }

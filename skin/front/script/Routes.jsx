@@ -16,18 +16,36 @@ class Routes extends Component {
   }
   bindRoutes() {
     let items = [];
-    if (this.props.context.wpApi.projects.length >= 1) {
-      items = this.props.context.wpApi.projects.map((project, index) => {
-        const {customHomepage} = this.props.context.wpApi;
+    let home = false;
+    const {projects, customHomepage} = this.props.context.wpApi;
 
-        let path = `/${project.path}`;
-        if (index === 0 && customHomepage) {
-          path = '/';
-          project.path = '';
+    if (projects.length >= 1) {
+      items = projects.map((project, index) => {
 
+        let slug = `/${project.slug}`;
+
+        if (customHomepage) {
+
+          if (!home) {
+            if (project.is_home) {
+
+              slug = '/';
+              project.slug = '';
+              home = true;
+            } else if (index === projects.length - 1) {
+
+              slug = '/';
+              project.slug = '';
+            }
+          }
+        } else if (index === 0) {
+
+          slug = '/';
+          project.slug = '';
         }
+
         return (
-          <Route key={index} path={path} exact={true} render={
+          <Route key={index} path={slug} exact={true} render={
             () => {
               return (<App context={this.props.context} selectedProject={project} />);
             }

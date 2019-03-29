@@ -15,14 +15,18 @@ class Enqueue extends BaseController
 
 	function enqueueAdmin() {
 
-    $main_admin_style = $this->plugin_url . 'skin/public/styles/adminTopBar.css';
-    wp_register_style( 'mbwp-admin-style', $main_admin_style, '', '1.0.0', false );
-    wp_enqueue_style( 'mbwp-admin-style' );
+    // enqueue only on setting page
+    if( ( ! empty($_GET["page"] ) && $_GET["page"] == "mb_topbar" ) || ( ! empty($_GET["page"] ) && $_GET["page"] == "mb_topbar_list_page" ) ) {
+
+      $main_admin_style = $this->plugin_url . 'skin/public/styles/adminTopBar.css';
+      wp_register_style( 'mbwp-admin-style', $main_admin_style, '', '1.0.0', false );
+      wp_enqueue_style( 'mbwp-admin-style' );
 
 
-    $main_admin_script = $this->plugin_url . 'skin/public/scripts/adminTopBar.js';
-    wp_register_script( 'mbwp-admin-scripts', $main_admin_script, array('jquery','wp-color-picker' ), '1.0.0', true );
-    wp_enqueue_script( 'mbwp-admin-scripts' );
+      $main_admin_script = $this->plugin_url . 'skin/public/scripts/adminTopBar.js';
+      wp_register_script( 'mbwp-admin-scripts', $main_admin_script, array('jquery','wp-color-picker' ), '1.0.0', true );
+      wp_enqueue_script( 'mbwp-admin-scripts' );
+    }
 	}
 
 	function enqueueFront() {

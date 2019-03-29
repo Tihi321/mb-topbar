@@ -1,0 +1,12 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: skin/front/script/components/Logo.jsx:10
+msgid "Homepage Link"
+msgstr ""
+
+#: skin/front/script/components/TopBar.jsx:32
+msgid "Menu"
+msgstr ""

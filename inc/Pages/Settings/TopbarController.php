@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @package  MBTopbar
  */
@@ -11,7 +11,7 @@ use Inc\Api\Callbacks\TopbarCallbacks;
 use Inc\Api\Callbacks\TemplatesController;
 
 /**
-* 
+*
 */
 class TopbarController extends BaseController
 {
@@ -48,11 +48,11 @@ class TopbarController extends BaseController
 	{
 		$this->subpages = array(
 			array(
-				'parent_slug' => 'mb_topbar', 
-				'page_title' => '', 
-				'menu_title' => 'Showcase', 
-				'capability' => 'manage_options', 
-				'menu_slug' => 'mb_topbar_list_page', 
+				'parent_slug' => 'mb_topbar',
+				'page_title' => '',
+				'menu_title' => 'Showcase',
+				'capability' => 'manage_options',
+				'menu_slug' => 'mb_topbar_list_page',
 				'callback' => array( $this->callbacks, 'topbarTemplate' )
 			)
 		);
@@ -90,20 +90,34 @@ class TopbarController extends BaseController
 		$args = array(
 			array(
 				'id' => 'activate',
-				'title' => 'Activate',
+				'title' => __( 'Activate', 'mb-topbar' ),
 				'callback' => array( $this->topbar_callback, 'checkboxField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
 				'args' => array(
 					'option_name' => 'mb_topbar_list',
 					'label_for' => 'activate',
-					'class' => 'ui-toggle'
+          'class' => 'ui-toggle',
+          'helper' => __( 'Only activated items will be shown in the menu', 'mb-topbar' ),
+				)
+			),
+			array(
+				'id' => 'is_home',
+				'title' => __( 'Homepage', 'mb-topbar' ),
+				'callback' => array( $this->topbar_callback, 'checkboxField' ),
+				'page' => 'mb_topbar_list_page',
+				'section' => 'mb_topbar_list_page_index',
+				'args' => array(
+					'option_name' => 'mb_topbar_list',
+					'label_for' => 'is_home',
+          'class' => 'ui-toggle',
+          'helper' => __( 'If custom homepage is checked this is homepage', 'mb-topbar' ),
 				)
 			),
 
 			array(
 				'id' => 'title',
-				'title' => 'Selection Name',
+				'title' => __( 'Selection Name', 'mb-topbar' ),
 				'callback' => array( $this->topbar_callback, 'textField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
@@ -111,27 +125,29 @@ class TopbarController extends BaseController
 					'option_name' => 'mb_topbar_list',
 					'label_for' => 'title',
 					'placeholder' => '',
-					'required' => 'yes',
+          'required' => 'yes',
+          'helper' => __( 'This name is for menu on top of the page', 'mb-topbar' ),
 				)
 			),
 
 			array(
-				'id' => 'path',
-				'title' => 'Slug',
+				'id' => 'slug',
+				'title' => __( 'Slug', 'mb-topbar' ),
 				'callback' => array( $this->topbar_callback, 'textField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
 				'args' => array(
 					'option_name' => 'mb_topbar_list',
-					'label_for' => 'path',
-					'placeholder' => '/ == homepage',
-					'required' => 'yes',
+					'label_for' => 'slug',
+					'placeholder' => 'slug-address',
+          'required' => 'yes',
+          'helper' => __( 'This is the slug for the page, it appears in address bar. Slug should be unique from other items.', 'mb-topbar' ),
 				)
 			),
 
 			array(
 				'id' => 'link',
-				'title' => 'Showcase Website',
+				'title' => __( 'Showcase Website', 'mb-topbar' ),
 				'callback' => array( $this->topbar_callback, 'textField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
@@ -139,21 +155,23 @@ class TopbarController extends BaseController
 					'option_name' => 'mb_topbar_list',
 					'label_for' => 'link',
 					'placeholder' => 'link',
-					'required' => 'yes',
+          'required' => 'yes',
+          'helper' => __( 'Link to the showcase, this link will be in the iframe below menu', 'mb-topbar' ),
 				)
 			),
 			array(
 				'id' => "color",
-				'title' => "Topbar BG Color",
+				'title' => __( "Topbar BG Color", 'mb-topbar' ),
 				'callback' => array( $this->topbar_callback, 'colorField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',
 				'args' => array(
 					'option_name' => 'mb_topbar_list',
-					'label_for' => "color",
+          'label_for' => "color",
+          'helper' => __( 'This is custom color of the topbar', 'mb-topbar' ),
 				)
 			),
-			
+
 		);
 
 		$this->settings->setFields( $args );

@@ -13,7 +13,8 @@ class DatabaseController extends BaseController
         $topbar_list_default = array(
 			array(
                 "title" => "Selection",
-                "path" => "",
+                "is_home" => "1",
+                "slug" => "",
                 "link" => "",
                 "color" => "#111111"
 			)
@@ -30,7 +31,6 @@ class DatabaseController extends BaseController
         if(! empty ($topbar_list ) ){
             foreach ($topbar_list as $key => $value) {
                 if(isset ($value['activate'] ) && $value['activate'] == 1){
-                    $value["path"] = ($value["path"] == "/") ? "" : $value["path"];
                     $topbar_list_array[] = $value;
                 }
             }
@@ -38,7 +38,7 @@ class DatabaseController extends BaseController
 
         $topbar_options = array(
             "plugin_url" => $this->plugin_url,
-            "logo_url" => $logo_link,
+            "logo_url" => esc_url_raw( $logo_link ),
             "custom_homepage" => $custom_homepage,
             "projects" => ( count($topbar_list_array) > 0 ) ? $topbar_list_array : $topbar_list_default
 
