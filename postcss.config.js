@@ -9,7 +9,7 @@ const plugins = [
   autoPrefixer,
   postcssFontMagician({
     variants: {
-      Montserrat: {
+      Raleway: {
         400: ['woff2', 'woff'],
         800: ['woff2', 'woff'],
       },

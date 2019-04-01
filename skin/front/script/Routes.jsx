@@ -30,18 +30,18 @@ class Routes extends Component {
             if (project.is_home) {
 
               slug = '/';
-              project.slug = '';
+              project.slug = '/';
               home = true;
             } else if (index === projects.length - 1) {
 
               slug = '/';
-              project.slug = '';
+              project.slug = '/';
             }
           }
         } else if (index === 0) {
 
           slug = '/';
-          project.slug = '';
+          project.slug = '/';
         }
 
         return (

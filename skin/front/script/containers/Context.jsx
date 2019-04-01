@@ -14,6 +14,7 @@ class MyProvider extends Component {
       homeUrl: topbarOptions.homeUrl,
       logoUrl: '',
       pluginUrl: '',
+      selectTitle: '',
       customHomepage: false,
       projects: [],
     };
@@ -29,6 +30,7 @@ class MyProvider extends Component {
             projects: result.projects,
             logoUrl: result.logo_url,
             pluginUrl: result.plugin_url,
+            selectTitle: result.select_title,
             customHomepage: result.custom_homepage,
           });
         },

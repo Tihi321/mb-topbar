@@ -4,13 +4,8 @@ import IframeContainer from './IframeContainer.jsx';
 
 class App extends PureComponent {
   render() {
-    const imageUrl =
-      `${this.props.context.wpApi.pluginUrl}skin/public/images/bg.png`;
-    const style = {
-      background: `url(${imageUrl}) repeat`,
-    };
     return (
-      <div className="react-container" style={style}>
+      <div className="react-container">
         <TopBar
           context={this.props.context}
           selectedProject={this.props.selectedProject}

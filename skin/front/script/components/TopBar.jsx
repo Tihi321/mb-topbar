@@ -1,17 +1,14 @@
 import {Component} from 'react';
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   FacebookIcon,
-  GooglePlusIcon,
   LinkedinIcon,
   TwitterIcon,
 } from 'react-share';
-import {__} from '@wordpress/i18n';
 import Logo from './Logo.jsx';
-import Menu from './Menu.jsx';
+import ProjectsSelect from './ProjectsSelect.jsx';
 import Viewport from './Viewport.jsx';
 
 class TopBar extends Component {
@@ -19,9 +16,15 @@ class TopBar extends Component {
     return false;
   }
   render() {
+    const selectTitleElement = (this.props.context.wpApi.selectTitle) ? this.props.context.wpApi.selectTitle : '';
     const styleTopbar = {
       backgroundColor: this.props.selectedProject.color,
     };
+
+    const sharebgColor = {
+      fill: '#333643',
+    };
+
     return (
       <div style={styleTopbar} className="top-bar">
         <Logo
@@ -29,10 +32,14 @@ class TopBar extends Component {
           logoUrl={this.props.context.wpApi.logoUrl}
         />
         <div className="header-text">
-          <p>{__('Menu', 'mb-topbar')}</p>
+          {selectTitleElement}
         </div>
-        <Menu
-          selectedProjectSlug={this.props.selectedProject.slug}
+        <ProjectsSelect
+          selectedProject={{
+            value: this.props.selectedProject.slug,
+            label: this.props.selectedProject.title,
+            color: this.props.selectedProject.color,
+          }}
           projects={this.props.context.wpApi.projects}
         />
         <Viewport
@@ -40,17 +47,29 @@ class TopBar extends Component {
           changeWidth={this.props.context.changeWidth}
         />
         <div className="social">
-          <FacebookShareButton url={this.props.context.wpApi.homeUrl}>
-            <FacebookIcon size={32} round={true} />
+          <FacebookShareButton className="share-item" url={this.props.context.wpApi.homeUrl}>
+            <FacebookIcon
+              round={true}
+              size={32}
+              iconBgStyle={sharebgColor}
+              logoFillColor="#E1E3E1"
+            />
           </FacebookShareButton>
-          <TwitterShareButton url={this.props.context.wpApi.homeUrl}>
-            <TwitterIcon size={32} round={true} />
+          <TwitterShareButton className="share-item" url={this.props.context.wpApi.homeUrl}>
+            <TwitterIcon
+              round={true}
+              size={32}
+              iconBgStyle={sharebgColor}
+              logoFillColor="#E1E3E1"
+            />
           </TwitterShareButton>
-          <GooglePlusShareButton url={this.props.context.wpApi.homeUrl}>
-            <GooglePlusIcon size={32} round={true} />
-          </GooglePlusShareButton>
-          <LinkedinShareButton url={this.props.context.wpApi.homeUrl}>
-            <LinkedinIcon size={32} round={true} />
+          <LinkedinShareButton className="share-item" url={this.props.context.wpApi.homeUrl}>
+            <LinkedinIcon
+              round={true}
+              size={32}
+              iconBgStyle={sharebgColor}
+              logoFillColor="#E1E3E1"
+            />
           </LinkedinShareButton>
         </div>
       </div>
