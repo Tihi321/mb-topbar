@@ -1,17 +1,26 @@
-# MB Topbar - Wordpress plugin
+<p align="center">
+  <img alt="Quizess banner image" src="packages/assets/banner-1544×500.png"/>
+</p>
+
+# MB Topbar - Elegant switch plugin
 
 This plugin adds demo bar on top of the page. It is suitable for web designers and web developers. If you are theme designer or developer and if you would like to showcase your designs this plugin could help.
 
-<div style="text-align:center;margin:2em 0;">
-<img src="readme/images/mb_topbar_preview_default.png">
-</div>
++ **Responsive Test Tool.** Change website width on the fly., Visible only on desktop.
++ **Social Share Button.** Share to Facebook, Twitter and Linkedin.
++ **Logo Upload.** Change the logo.
++ **Background Color.** Choose background color of the showcase item topbar.
++ **Showcase Name.** Select item name.
++ **Slug.** Slug for the address bar.
 
-You have the option to change your **logo** and for each *selection item* you can choose **background color** of the demo bar, **selection name** for menu and **slug** for address bar. 
-
-<div style="text-align:center;margin:2em 0;">
-<img src="readme/images/mb_topbar_preview.png">
-</div>
+<p align="center">
+  <img alt="Quizess banner image" src="packages/screenshots/screenshot-01.png"/>
+</p>
 
 **Wordpress Api** is used to send information from backend.
 
-Built with: **Wordpress**, **React**, **Redux**
+<p align="center">
+  <img alt="Quizess banner image" src="packages/screenshots/screenshot-04.png"/>
+</p>
+
+Built with: **Wordpress**, **React**
