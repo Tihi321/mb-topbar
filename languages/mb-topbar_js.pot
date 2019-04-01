@@ -19,10 +19,6 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: skin/front/script/components/Logo.jsx:13
+#: skin/front/script/components/Logo.jsx:29
 msgid "Homepage Link"
-msgstr ""
-
-#: skin/front/script/components/TopBar.jsx:32
-msgid "Menu"
 msgstr ""

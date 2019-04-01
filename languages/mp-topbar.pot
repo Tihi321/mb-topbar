@@ -17,10 +17,12 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: ../skin/admin/script/components/Media.js:46
 #: ../inc/Api/Callbacks/DashboardCallbacks.php:37
 msgid "Edit"
 msgstr ""
 
+#: ../skin/admin/script/components/Media.js:54
 #: ../inc/Api/Callbacks/DashboardCallbacks.php:37
 msgid "Upload"
 msgstr ""
@@ -70,10 +72,18 @@ msgid "Logo"
 msgstr ""
 
 #: ../inc/Pages/Settings/Dashboard.php:100
+msgid "Title"
+msgstr ""
+
+#: ../inc/Pages/Settings/Dashboard.php:109
+msgid "Optional select title, between logo and select field"
+msgstr ""
+
+#: ../inc/Pages/Settings/Dashboard.php:114
 msgid "Custom Homepage"
 msgstr ""
 
-#: ../inc/Pages/Settings/Dashboard.php:108
+#: ../inc/Pages/Settings/Dashboard.php:122
 msgid "This options allows you to name first item to show on the page, if unchecked first active item will be shown"
 msgstr ""
 
@@ -94,7 +104,7 @@ msgid "If custom homepage is checked this is homepage"
 msgstr ""
 
 #: ../inc/Pages/Settings/TopbarController.php:120
-msgid "Selection Name"
+msgid "Showcase Name"
 msgstr ""
 
 #: ../inc/Pages/Settings/TopbarController.php:129
@@ -145,26 +155,14 @@ msgstr ""
 msgid "Showcase List"
 msgstr ""
 
-#: skin/admin/script/components/Media.js:22
+#: ../skin/admin/script/components/Media.js:22
 msgid "Choose a Logo Image"
 msgstr ""
 
-#: skin/admin/script/components/Media.js:24
+#: ../skin/admin/script/components/Media.js:24
 msgid "Choose Logo"
 msgstr ""
 
-#: skin/admin/script/components/Media.js:46
-msgid "Edit"
-msgstr ""
-
-#: skin/admin/script/components/Media.js:54
-msgid "Upload"
-msgstr ""
-
-#: skin/front/script/components/Logo.jsx:13
+#: ../skin/front/script/components/Logo.jsx:29
 msgid "Homepage Link"
-msgstr ""
-
-#: skin/front/script/components/TopBar.jsx:32
-msgid "Menu"
 msgstr ""

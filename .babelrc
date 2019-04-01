@@ -46,7 +46,7 @@
     [
       "@wordpress/babel-plugin-makepot",
       {
-        "output": "languages/mb-topbar__js.pot"
+        "output": "languages/mb-topbar_js.pot"
       }
     ],
     [
