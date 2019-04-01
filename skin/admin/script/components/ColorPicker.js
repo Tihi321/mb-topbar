@@ -13,7 +13,7 @@ export default class ColorPicker {
     const picker = new Picker({
       parent: this.colorPickerElement,
       popup: 'top',
-      color: this.colorPickerInputElement.value || '#066486',
+      color: this.colorPickerInputElement.value || '#333643',
       editorFormat: 'hex',
       onDone: this.onColorPickedCallback,
       onChange: this.onColorPickedCallback,
