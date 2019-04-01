@@ -6,7 +6,7 @@
             background-repeat: no-repeat;
             background-color: transparent;
             padding: 0;
-            @media screen and (min-width: $size_mobile) {
+            @media screen and (min-width: $size_desktop) {
                 display: block;
                 opacity: .7;
                 cursor: pointer;
