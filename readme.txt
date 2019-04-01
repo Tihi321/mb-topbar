@@ -31,7 +31,7 @@ This plugin is open source software, and you may actively contribute on [Github]
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/quizess\' directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/mb-topbar\' directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the \'Plugins\' screen in WordPress
 3. Use the MB Topbar screen to configure the plugin
 
