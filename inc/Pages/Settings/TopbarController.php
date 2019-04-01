@@ -117,7 +117,7 @@ class TopbarController extends BaseController
 
 			array(
 				'id' => 'title',
-				'title' => __( 'Selection Name', 'mb-topbar' ),
+				'title' => __( 'Showcase Name', 'mb-topbar' ),
 				'callback' => array( $this->topbar_callback, 'textField' ),
 				'page' => 'mb_topbar_list_page',
 				'section' => 'mb_topbar_list_page_index',

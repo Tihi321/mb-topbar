@@ -27,7 +27,7 @@ class DashboardCallbacks extends BaseController
 		$option_name = $args['option_name'];
 	}
 
-	public function textField( $args )
+	public function imageField( $args )
 	{
 		$name = $args['label_for'];
 		$option_name = $args['option_name'];
@@ -44,6 +44,22 @@ class DashboardCallbacks extends BaseController
     echo "<button class='button button-secondary button-small js-logo-media-btn'>$upload_button_title</button>";
     echo "<button class='button button-secondary button-small js-logo-media-remove-btn'>$remove_button_title</button>";
 		echo '<input type="text" hidden class="regular-text js-logo-url" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '" placeholder="' . $args['placeholder'] . '">';
+  }
+
+	public function textField( $args )
+	{
+		$name = $args['label_for'];
+		$helper = ( ! empty( $args['helper'] ) ) ? $args['helper'] : '';
+		$option_name = $args['option_name'];
+		$required = ($args['required'] == "yes")?"required":"";
+    $value = '';
+
+    $options = get_option( $option_name );
+    $value = ! empty($options[$name]) ? $options[$name] : '';
+
+    $helper_output = ( empty($helper ) ) ? '' : "<div class='mb-topbar__helper'>$helper</div>";
+
+		echo '<input type="text" class="regular-text" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '" placeholder="' . $args['placeholder'] . '" ' . $required . '>' . $helper_output;
   }
 
   public function checkboxField( $args )

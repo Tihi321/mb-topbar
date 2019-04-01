@@ -13,7 +13,7 @@ $topbar_callback = new TopbarCallbacks();
 		<li class="<?php echo !isset($_POST["edit_post"]) ? 'active' : '' ?>"><a href="#tab-1"><?php esc_html_e( 'Showcase List', 'mb-topbar' ); ?></a></li>
 		<li class="<?php echo isset($_POST["edit_post"]) ? 'active' : '' ?>">
 			<a href="#tab-2">
-				<?php echo isset($_POST["edit_post"]) ? esc_html( 'Edit' ) : esc_html( 'Add' ); esc_html_e( 'Showcase' ); ?>
+				<?php echo isset($_POST["edit_post"]) ? esc_html( 'Edit' ) : esc_html( 'Add' ); esc_html_e( ' Showcase' ); ?>
 			</a>
 		</li>
 	</ul>

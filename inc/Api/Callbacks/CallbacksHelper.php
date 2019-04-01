@@ -27,6 +27,7 @@ class CallbacksHelper
 		$output = array();
 
     $output["wp_logo_link"] = esc_url_raw( $input["wp_logo_link"] );
+    $output["select_title"] = isset( $input["select_title"] ) ? sanitize_text_field($input["select_title"]) : '';
     $output["custom_homepage"] = isset( $input["custom_homepage"] ) ?: false;
 
 		return $output;
