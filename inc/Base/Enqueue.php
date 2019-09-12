@@ -43,12 +43,6 @@ class Enqueue extends BaseController
 
 
       wp_deregister_script( 'jquery' );
-      wp_deregister_script( 'react' );
-      wp_deregister_script( 'react-dom' );
-
-      wp_register_script( 'react', $this->plugin_url . 'skin/public/scripts/vendors/react.development.js', array(), '16.6.3', false );
-
-      wp_register_script( 'react-dom', $this->plugin_url . 'skin/public/scripts/vendors/react-dom.development.js', array(), '16.6.3', false );
 
       wp_enqueue_script( 'wp-element' );
       wp_enqueue_script( 'wp-components' );
