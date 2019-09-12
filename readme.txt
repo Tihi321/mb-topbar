@@ -3,7 +3,7 @@ Contributors: Tihi321
 Tags: topbar, demo, switch
 Donate link: PayPal.Me/tihi321
 Requires at least: 5.0
-Tested up to: 5.1.1
+Tested up to: 5.2.3
 Requires PHP: 7.0
 Stable tag: 1.0
 License: GPL-2.0
@@ -50,6 +50,10 @@ A: Under MB Topbar->Showcase choose tad Add Showcase .
 4. Frontend topbar
 
 == Changelog ==
+
+= 1.0.1 =
+* Enqueued Gutenberg React on frontend.
+* Removed unused scripts.
 
 = 1.0.0 =
 * First release.
